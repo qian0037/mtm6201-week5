@@ -1,0 +1,89 @@
+/* animations */
+@keyframes changeBg {
+    0% {
+        background-color: #333;
+    }
+
+    50% {
+        background-color: aquamarine;
+        transform: translateX(100px);
+    }
+
+    100% {
+        background-color: bisque;
+    }
+}
+
+@keyframes loadLogo{
+    0% {
+        transform: translateY(-300px);
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    animation-name: loadLogo;
+    animation-duration: 2s;
+}
+
+.animate {
+    animation-name: changeBg;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    transition-property: transform; 
+    transition-duration: 1s;
+}
+
+/* transforms */
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #900;
+    transition: transform 1s;
+}
+
+.box:hover {
+    /* transform: rotate(90deg);
+    transform-origin: top right; */
+    /* transform: scale(1.2); */
+    transform: skew(10deg, 10deg);
+    transform: translateX(20px);
+}
+
+h1 {
+    
+}
+/* transitions */
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #369;
+    display: block;
+    padding: 1rem;
+    background-color: #ccc;
+    margin: 1px;
+    /* anchor exists in both */
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+
+nav ul li a:hover, .active {
+    color: #900;
+    background-color: white;
+}
